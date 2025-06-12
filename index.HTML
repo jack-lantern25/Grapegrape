@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🍇</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #grape {
+      font-size: 4rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #grape:hover {
+      transform: scale(1.1);
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      opacity: 0;
+      max-width: 600px;
+      transition: opacity 0.5s ease;
+      line-height: 1.5;
+    }
+
+    #message.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="grape">🍇</div>
+  <div id="message"></div>
+
+  <script>
+    const grape = document.getElementById('grape');
+    const message = document.getElementById('message');
+
+    grape.addEventListener('click', () => {
+      message.innerHTML = `
+        Hey Jana,<br><br>
+        I know this was revealed to your mom in the worst way possible and I'm trying my best to make things right.
+        I will call your mom along with my aunt for some woman to woman experience and I will make everything right again.<br><br>
+        If your mom is not okay with a relationship then at least it'd make things calmer and allow me to have my chance with engagement and marriage later on,
+        so please don't be upset and I will fix everything insha'allah.<br><br>
+        Hopefully your mom is understanding and would let me talk and deliver the idea and intention behind everything.<br><br>
+        Love you,<br>
+        M.
+      `;
+      message.classList.add('show');
+    });
+  </script>
+</body>
+</html>
